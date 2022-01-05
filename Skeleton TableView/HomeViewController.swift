@@ -8,7 +8,13 @@
 import UIKit
 
 
+protocol HomeViewControllerDelegate: AnyObject {
+     func didTapButtonMenu()
+}
+
 class  HomeViewController: UIViewController {
+    
+    weak var delegate: HomeViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +24,8 @@ class  HomeViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "list.dash"), style: .done, target: self, action: #selector(barButtonTapped ))
     }
     @objc func barButtonTapped(){
-          print("tap")
+        delegate?.didTapButtonMenu()
+         
     }
 
 }
