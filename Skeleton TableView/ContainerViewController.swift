@@ -22,6 +22,7 @@ class ContainerViewController: UIViewController {
     var navVC: UINavigationController?
     
     lazy var infoVC = InfoViewController()
+    lazy var settingsVC = SettingsViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +104,7 @@ extension ContainerViewController: MenuViewControllerDelegate{
         case .shareApp:
             break
         case .settings:
-            break
+            addSettings()
         }
     }
     func addInfo(){
@@ -115,10 +116,25 @@ extension ContainerViewController: MenuViewControllerDelegate{
         homeVC.title = vc.title
     }
     
+    func addSettings(){
+        let vc = settingsVC
+        homeVC.addChild(vc)
+        homeVC.view.addSubview(vc.view)
+        vc.view.frame = view.frame
+        vc.didMove(toParent: homeVC )
+        homeVC.title = vc.title
+    }
+    
     func resetToHome(){
         infoVC.view.removeFromSuperview()
         infoVC.didMove(toParent: nil)
+        
+        settingsVC.view.removeFromSuperview()
+        settingsVC.didMove(toParent: nil)
+        
+        //сюда нужно добовлять каждый экран, чтобы все робило хорошо (я добавил только два )
         homeVC.title = "Home "
+        homeVC.view.backgroundColor = .white
     }
     
 }
