@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class  AppRating: UIViewController {
 
@@ -13,7 +14,21 @@ class  AppRating: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
         title = "AppRating"
+        initilize()
     }
 
+    private func initilize() {
+        view.backgroundColor = UIColor(red: 50/255, green: 11/255, blue: 200/255, alpha: 1)
+        
+        let label = UILabel()
+        label.text = " RATING🎉"
+        label.font = UIFont.systemFont(ofSize: 20)
+        view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(50)
+            make.top.equalToSuperview().inset(150)
+            
+        }
+    }
 
 }

@@ -146,6 +146,8 @@ extension ContainerViewController: MenuViewControllerDelegate{
     }
     
     func resetToHome(){
+        
+        
         infoVC.view.removeFromSuperview()
         infoVC.didMove(toParent: nil)
         

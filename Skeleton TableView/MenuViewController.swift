@@ -26,15 +26,15 @@ class  MenuViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var imageName: String {
             switch self {
             case .home:
-                return "house"
+                return "music.note.house.fill"
             case .info:
-                return "airplane"
+                return "airplane.arrival"
             case .appRating:
-                return "star"
+                return "star.bubble"
             case .shareApp:
-                return "message"
+                return "plus.message"
             case .settings:
-                return "gear"
+                return "gear.badge.questionmark"
             }
         }
     }
