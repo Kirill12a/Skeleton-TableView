@@ -23,6 +23,8 @@ class ContainerViewController: UIViewController {
     
     lazy var infoVC = InfoViewController()
     lazy var settingsVC = SettingsViewController()
+    lazy var ratingVC = AppRating()
+    lazy var shareVC = ShareAppViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,11 +102,11 @@ extension ContainerViewController: MenuViewControllerDelegate{
         case .info:
             self.addInfo()
         case .appRating:
-            break
+            self.appRating()
         case .shareApp:
-            break
+            self.shareApp()
         case .settings:
-            addSettings()
+            self.addSettings()
         }
     }
     func addInfo(){
@@ -125,6 +127,24 @@ extension ContainerViewController: MenuViewControllerDelegate{
         homeVC.title = vc.title
     }
     
+    func appRating(){
+        let vc = ratingVC
+        homeVC.addChild(vc)
+        homeVC.view.addSubview(vc.view)
+        vc.view.frame = view.frame
+        vc.didMove(toParent: homeVC)
+        homeVC.title = vc.title
+    }
+    
+    func shareApp(){
+        let vc = shareVC
+        homeVC.addChild(vc)
+        homeVC.view.addSubview(vc.view)
+        vc.view.frame = view.frame
+        vc.didMove(toParent: homeVC)
+        homeVC.title = vc.title
+    }
+    
     func resetToHome(){
         infoVC.view.removeFromSuperview()
         infoVC.didMove(toParent: nil)
@@ -132,7 +152,12 @@ extension ContainerViewController: MenuViewControllerDelegate{
         settingsVC.view.removeFromSuperview()
         settingsVC.didMove(toParent: nil)
         
-        //сюда нужно добовлять каждый экран, чтобы все робило хорошо (я добавил только два )
+        ratingVC.view.removeFromSuperview()
+        ratingVC.didMove(toParent: nil)
+        
+        shareVC.view.removeFromSuperview()
+        shareVC.didMove(toParent: nil)
+    // ---------------------------- //
         homeVC.title = "Home "
         homeVC.view.backgroundColor = .white
     }

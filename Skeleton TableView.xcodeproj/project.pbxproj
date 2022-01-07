@@ -18,6 +18,8 @@
 		D2FF382127857AA700847075 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF382027857AA700847075 /* HomeViewController.swift */; };
 		D2FF382327857ABF00847075 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF382227857ABF00847075 /* InfoViewController.swift */; };
 		D2FF38252785972100847075 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF38242785972100847075 /* SettingsViewController.swift */; };
+		D2FF38272788CDEC00847075 /* AppRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF38262788CDEC00847075 /* AppRating.swift */; };
+		D2FF38292788CEE400847075 /* ShareAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF38282788CEE400847075 /* ShareAppViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		D2FF382027857AA700847075 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D2FF382227857ABF00847075 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		D2FF38242785972100847075 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D2FF38262788CDEC00847075 /* AppRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRating.swift; sourceTree = "<group>"; };
+		D2FF38282788CEE400847075 /* ShareAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAppViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				D26F55502783475500E5ECCA /* ContainerViewController.swift */,
 				D2FF381E27857A8A00847075 /* MenuViewController.swift */,
 				D2FF382027857AA700847075 /* HomeViewController.swift */,
+				D2FF38262788CDEC00847075 /* AppRating.swift */,
+				D2FF38282788CEE400847075 /* ShareAppViewController.swift */,
 				D2FF38242785972100847075 /* SettingsViewController.swift */,
 				D2FF382227857ABF00847075 /* InfoViewController.swift */,
 				D26F55522783475500E5ECCA /* Main.storyboard */,
@@ -218,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FF38272788CDEC00847075 /* AppRating.swift in Sources */,
 				D2FF382127857AA700847075 /* HomeViewController.swift in Sources */,
 				D26F55512783475500E5ECCA /* ContainerViewController.swift in Sources */,
 				D2FF38252785972100847075 /* SettingsViewController.swift in Sources */,
@@ -225,6 +232,7 @@
 				D26F554F2783475500E5ECCA /* SceneDelegate.swift in Sources */,
 				D2FF382327857ABF00847075 /* InfoViewController.swift in Sources */,
 				D2FF381F27857A8A00847075 /* MenuViewController.swift in Sources */,
+				D2FF38292788CEE400847075 /* ShareAppViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
