@@ -41,7 +41,7 @@ class  MenuViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .gray
+        tableView.backgroundColor = .lightGray
         tableView.register(UITableViewCell.self , forCellReuseIdentifier: "cell")
         return tableView
     }()
@@ -53,7 +53,7 @@ class  MenuViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor =  .gray
+        view.backgroundColor =  .lightGray
         view.addSubview(tableView)
         
         tableView.delegate = self
@@ -71,10 +71,10 @@ class  MenuViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = MenuOption.allCases[indexPath.row].rawValue
         cell.textLabel?.textColor = .white
-        cell.backgroundColor = .gray
-        cell.contentView.backgroundColor = .gray
+        cell.backgroundColor = .lightGray
+        cell.contentView.backgroundColor = .lightGray
         cell.imageView?.image =  UIImage(systemName:  MenuOption.allCases[indexPath.row].imageName)
-        cell.imageView?.tintColor = .white
+        cell.imageView?.tintColor = .green
         return cell
     }
     
